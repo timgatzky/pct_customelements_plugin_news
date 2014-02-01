@@ -7,9 +7,7 @@
  * 
  * @copyright	Tim Gatzky 2014
  * @author		Tim Gatzky <info@tim-gatzky.de>
- * @package		
- * @link			http://contao.org
- * @license		http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @package		pct_customelements_plugin_news
  */
 
 /**
