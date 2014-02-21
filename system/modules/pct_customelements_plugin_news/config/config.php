@@ -10,13 +10,27 @@
  * @package		pct_customelements_plugin_news
  */
 
-
 /**
- * Globals
+ * Register the plugin
  */
-$GLOBALS['PCT_CUSTOMELEMENTS']['allowedTables'][] 	= 'tl_news';
+array_insert($GLOBALS['PCT_CUSTOMELEMENTS']['PLUGINS'], 0, array
+(
+	'plugin_news' => array
+	(
+		// has access
+		'tables' => array('tl_news'),
+		// tell the custom elements which field is the selection field for the table tl_news
+		'selectionfield' => array
+		(
+			'tl_news'=>'customelement_selection'
+		),
+		'path' => 'system/modules/pct_customelement_plugin_news',
+	)
+));
+ 
+#$GLOBALS['PCT_CUSTOMELEMENTS']['allowedTables'][] 	= 'tl_news';
 // tell the custom elements which field is the selection field for the table tl_news
-$GLOBALS['PCT_CUSTOMELEMENTS']['tl_news']['selectionfield'] = 'customelement_selection';
+#$GLOBALS['PCT_CUSTOMELEMENTS']['tl_news']['selectionfield'] = 'customelement_selection';
 
 /**
  * Hooks
