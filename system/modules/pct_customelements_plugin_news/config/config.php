@@ -15,7 +15,7 @@
  */
 array_insert($GLOBALS['PCT_CUSTOMELEMENTS']['PLUGINS'], 0, array
 (
-	'plugin_news' => array
+	'news' => array
 	(
 		// has access
 		'tables' => array('tl_news'),

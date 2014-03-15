@@ -16,4 +16,4 @@
 /**
  * CustomElements Plugin
  */
-$GLOBALS['TL_LANG']['PCT_CUSTOMELEMENTS']['PLUGINS']['plugin_news'] = array('News Plugin','Dieses Plugin fügt dem Nachrichten-Modul für jeden Betrag das CustomElements Widget hinzu.');
+$GLOBALS['TL_LANG']['PCT_CUSTOMELEMENTS']['PLUGINS']['news'] = array('News Plugin','Dieses Plugin fügt dem Nachrichten-Modul für jeden Betrag das CustomElements Widget hinzu.');

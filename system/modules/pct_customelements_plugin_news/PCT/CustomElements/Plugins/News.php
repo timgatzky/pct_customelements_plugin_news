@@ -39,8 +39,10 @@ class News extends \Frontend
 		}
 		
 		$objCustomElement = CustomElementFactory::byAlias($arrRow['customelement_selection']);
-		$objCustomElement->setOrigin($arrRow['id'],'tl_news');
-		
-		$objTemplate->customelement = $objCustomElement->render();
+		if($objCustomElement)
+		{
+			$objCustomElement->setOrigin($arrRow['id'],'tl_news');
+			$objTemplate->customelement = $objCustomElement->render();
+		}
 	}
 }
