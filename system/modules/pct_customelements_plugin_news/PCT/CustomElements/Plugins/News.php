@@ -38,7 +38,7 @@ class News extends \Frontend
 			return;
 		}
 		
-		$objCustomElement = CustomElementFactory::byAlias($arrRow['customelement_selection']);
+		$objCustomElement = CustomElementFactory::findByAlias($arrRow['customelement_selection']);
 		if($objCustomElement)
 		{
 			$objCustomElement->setOrigin($arrRow['id'],'tl_news');
