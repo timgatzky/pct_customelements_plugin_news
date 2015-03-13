@@ -17,13 +17,12 @@ $GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][] = array('tl_news_pc
  * Default custom element palettes
  */
 // injcet the custom element selection in the default palette
-$GLOBALS['TL_DCA']['tl_news']['palettes']['__customelement__'] = str_replace
+$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace
 (
-	'customelement_selection;',
-	'customelement_selection,customelement_widget;',
+	'addEnclosure;',
+	'addEnclosure;{customelement_legend},customelement_selection,customelement_widget;',
 	$GLOBALS['TL_DCA']['tl_news']['palettes']['default']
 );
-
 /**
  * Fields
  */
