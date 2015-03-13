@@ -17,17 +17,10 @@ $GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][] = array('tl_news_pc
  * Default custom element palettes
  */
 // injcet the custom element selection in the default palette
-$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace
-(
-	'addEnclosure;',
-	'addEnclosure;{customelement_legend},customelement_selection;',
-	$GLOBALS['TL_DCA']['tl_news']['palettes']['default']
-);
-
 $GLOBALS['TL_DCA']['tl_news']['palettes']['__customelement__'] = str_replace
 (
 	'customelement_selection;',
-	'customelement_selection,###CUSTOMELEMENT_WIDGET###;',
+	'customelement_selection,customelement_widget;',
 	$GLOBALS['TL_DCA']['tl_news']['palettes']['default']
 );
 
@@ -44,6 +37,12 @@ array_insert($GLOBALS['TL_DCA']['tl_news']['fields'], 0,array
 		'options_callback'		  => array('tl_news_pct_customelement_plugin_news','getCustomElements'),
 		'eval'                    => array('tl_class'=>'clr','submitOnChange'=>true,'includeBlankOption'=>true,'chosen'=>true),
 		'sql'					  => "varchar(255) NOT NULL default ''",
+	),
+	'customelement_widget' => array
+	(
+		'exclude'                 => true,
+		'inputType'               => 'pct_customelement',
+		'input_field_callback'  => array('\PCT\CustomElements\Backend\BackendIntegration','generateGenericCustomElementField'),
 	),
 ));
 
