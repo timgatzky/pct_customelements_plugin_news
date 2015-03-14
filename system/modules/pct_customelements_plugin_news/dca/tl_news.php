@@ -12,17 +12,21 @@
 
 $GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][] = array('tl_news_pct_customelement_plugin_news', 'loadStyles');
 
+/**
+ * Selectors
+ */
+$GLOBALS['TL_DCA']['tl_news']['palettes']['__selector__'][] = 'customelement_selection';
 
 /**
- * Default custom element palettes
+ * Palettes
  */
-// injcet the custom element selection in the default palette
-$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace
-(
-	'addEnclosure;',
-	'addEnclosure;{customelement_legend},customelement_selection,customelement_widget;',
-	$GLOBALS['TL_DCA']['tl_news']['palettes']['default']
-);
+$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] .= ';{customelement_legend},customelement_selection;';
+
+/**
+ * Subpalettes
+ */
+$GLOBALS['TL_DCA']['tl_news']['subpalettes']['customelement_selection'] = 'customelement_widget';
+
 /**
  * Fields
  */
