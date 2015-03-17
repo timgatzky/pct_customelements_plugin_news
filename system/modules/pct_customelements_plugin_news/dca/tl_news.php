@@ -20,7 +20,7 @@ $GLOBALS['TL_DCA']['tl_news']['palettes']['__selector__'][] = 'customelement_sel
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] .= ';{customelement_legend},customelement_selection;';
+$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] .= ';{customelement_legend},customelement_selection,###CUSTOMELEMENT_WIDGET###;';
 
 /**
  * Subpalettes
